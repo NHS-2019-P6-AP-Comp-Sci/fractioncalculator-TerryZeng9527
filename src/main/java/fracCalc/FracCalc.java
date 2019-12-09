@@ -19,7 +19,7 @@ public class FracCalc {
 		} else {
 			String number2 = produceAnswer(equation);
 
-		System.out.println(number2);
+		System.out.println(number2 );
 
 		}
 		
@@ -60,7 +60,55 @@ public class FracCalc {
 
 		String num2 = eq.substring(indexOfNum2);
 		
-		return num2;
+		int under = 0;
+		int slash = 0;
+
+		String wholeNumber = "0";
+		String numerator = "0";
+		String denominator = "1";
+
+		String wholeNumber1 = "0";
+		String numerator1 = "0";
+		String denominator1 = "1";
+
+		// System.out.println(num1);
+		// System.out.println(num2);
+//First Number
+		if (num1.contains("/")) {
+			if (num1.contains("_")) {
+				under = num1.indexOf("_");
+				wholeNumber = num1.substring(0, under);
+				slash = num1.indexOf("/");
+				numerator = num1.substring(under + 1, slash);
+				denominator = num1.substring(slash + 1);
+			} else {
+				slash = num1.indexOf("/");
+				numerator = num1.substring(0, slash);
+				denominator = num1.substring(slash + 1);
+			}
+		} else {
+			wholeNumber = num1;
+		}
+		//System.out.println("First Number: whole: " + wholeNumber + " numerator: " + numerator + "denominator: " + denominator);
+//Second Number 		
+		if (num2.contains("/")) {
+			if (num2.contains("_")) {
+				under = num2.indexOf("_");
+				wholeNumber1 = num2.substring(0, under);
+				slash = num2.indexOf("/");
+				numerator1 = num2.substring(under + 1, slash);
+				denominator1 = num2.substring(slash + 1);
+			} else {
+				slash = num2.indexOf("/");
+				numerator1 = num2.substring(0, slash);
+				denominator1 = num2.substring(slash + 1);
+			}
+		} else {
+			wholeNumber1 = num2;
+		}
+		String result = "whole:"+wholeNumber1+" numerator:"+numerator1+" denominator:"+denominator1;
+//Value of first number 
+		return result;
 		
 	}
 }
