@@ -127,8 +127,8 @@ public class FracCalc {
 		top1 = top1 + whole1*bot1;
 		whole = 0;
 		whole1= 0;
-//		System.out.println(
-//		"First Number: numerator: " + top + "denominator: " + bot);
+//		System.out.println(    
+//		"First Number: numerator: " + top + "denominator: " + bot );
 //
 //		System.out.println("Second Number: numerator: " + top1 + " denominator: "
 //		+ bot1);
