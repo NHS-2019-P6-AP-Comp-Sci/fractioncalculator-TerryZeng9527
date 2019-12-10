@@ -215,7 +215,7 @@ public class FracCalc {
 			botTotal = 0;
 			topTotal = 0;
 		}
-//Prints out answer for mixed faction or whole number
+//Prints out answer for mix faction or whole number
 		if (botTotal == 0 && redu ==1) {
 			System.out.println("Cannot divide by 0");
 		}else {
